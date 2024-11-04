@@ -1,0 +1,56 @@
+## visual studio
+
+**/.vs/
+
+##
+
+## vscode
+
+**/.cache/
+
+##
+
+## vcpkg
+
+**/vcpkg_installed
+
+##
+
+## build directories
+
+**/out/
+**/build/
+**/a/ # lol
+
+##
+
+## garbage
+
+# GitHub workflow stuff (will be reworked)
+.github/
+*.PROJ
+
+# C++
+*.lib
+*.exe
+*.pdb
+*.dll
+
+# macOS
+*.DS_Store
+
+# CMake
+CMakeLists.txt.user
+CMakeCache.txt
+CMakeFiles
+CMakeScripts
+Testing
+Makefile
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+_deps
+CMakeUserPresets.json
+
+##
