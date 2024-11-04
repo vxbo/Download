@@ -13,7 +13,7 @@ static std::string fetchFilename(const std::string& url)
 	return url.substr(last + 1);
 }
 
-namespace Cownload
+namespace Cownloadpp
 {
 	const bool download(const std::string& link, const std::string& path);
-} // namespace Cownload
+} // namespace Cownloadpp

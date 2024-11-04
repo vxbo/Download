@@ -1,7 +1,9 @@
+#include <curlpp/Options.hpp>
+#include <curlpp/cURLpp.hpp>
+#include <curlpp/Easy.hpp>
+#include <Cownloadpp.hpp>
 #include <gtest/gtest.h>
 #include <gmock/gmock.h>
-#include <curl/curl.h>
-#include <lib.hpp>
 #include <fstream>
 
 class CurlMock
@@ -11,32 +13,32 @@ public:
     MOCK_METHOD(void, curl_easy_cleanup, (CURL*), ());
 };
 
-class CownloadTest : public ::testing::Test
+class CownloadppTest : public ::testing::Test
 {
 public:
-    CownloadTest() = default;
+    CownloadppTest() = default;
 };
 
 // Tests for fetchFilename function
-TEST_F(CownloadTest, FetchFilename_ValidUrl_ReturnsFilename)
+TEST_F(CownloadppTest, FetchFilename_ValidUrl_ReturnsFilename)
 {
     std::string link = "https://raw.githubusercontent.com/github/gitignore/refs/heads/main/Objective-C.gitignore";
     std::string expected = "Objective-C.gitignore";
     EXPECT_EQ(fetchFilename(link), expected);
 }
 
-TEST_F(CownloadTest, FetchFilename_NoSlash_ReturnsFullUrl)
+TEST_F(CownloadppTest, FetchFilename_NoSlash_ReturnsFullUrl)
 {
     std::string link = "Objective-C.gitignore";
     EXPECT_EQ(fetchFilename(link), link);
 }
 
 // Test for download function
-TEST_F(CownloadTest, Download_DirectLink_CallsDownload) {
+TEST_F(CownloadppTest, Download_DirectLink_CallsDownload) {
     std::string link = "https://raw.githubusercontent.com/github/gitignore/refs/heads/main/Objective-C.gitignore";
     std::string path = "./tests";
 
-    bool result = Cownload::download(link, path);
+    bool result = Cownloadpp::download(link, path);
     EXPECT_TRUE(result);
 }
 
