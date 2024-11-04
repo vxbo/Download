@@ -23,7 +23,8 @@ THE SOFTWARE.
 This project uses the following external libraries:
 
 - boost: Licensed under the BSL-1.0 License.
-- curl: Licensed under the curlandISCandBSD-3-Clause License.
+- curl: Licensed under the curl, ISC and BSD-3-Clause License.
 - gtest: Licensed under the BSD 3-Clause License.
+- urllib3: Licensed under the MIT License.
 
 See the respective license files in the 'third_party' directory in the project root for more information.
