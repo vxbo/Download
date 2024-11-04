@@ -17,13 +17,12 @@ const bool Cownload::download(const std::string& link, const std::string& path =
 	{
 		if (!boost::filesystem::create_directories(path))
 		{
-			std::cerr << "Directory does not exist: " << path << std::endl;
+			std::cerr << "Directory can't be created: " << path << std::endl;
 			return false;
 		}
 	}
 
 	std::string out = fetchFilename(link);
-	std::cout << "Path: " << path << ", Filename: " << out << std::endl;
 
 	if (out.empty())
 	{

@@ -21,7 +21,7 @@ cmake --build .
   <p>This project uses the following external libraries:</p>
   <ul>
     <li><a href="https://www.boost.org">Boost</a>: Licensed under the BSL-1.0 License.</li>
-    <li><a href="https://curl.se">curl</a>: Licensed under the curlandISCandBSD-3-Clause License.</li>
+    <li><a href="https://curl.se">curl</a>: Licensed under the curl, ISC and BSD-3-Clause Licenses.</li>
     <li><a href="https://github.com/google/googletest">Google Test</a>: Licensed under the BSD-3-Clause License.</li>
   </ul>
   <div align="center">
