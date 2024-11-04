@@ -1,28 +1,33 @@
 import unittest
-from unittest.mock import patch
+from unittest.mock import patch, MagicMock
 import pywload
 
-class testDownload(unittest.TestCase):
+class TestDownload(unittest.TestCase):
        
-    @patch('urllib.request.urlretrieve')
-    def test_download_success(self, mock_urlretrieve):
-        mock_urlretrieve.return_value = None
-        url = "https://raw.githubusercontent.com/github/gitignore/refs/heads/main/Objective-C.gitignore"
+    @patch('urllib3.PoolManager')
+    def test_download_success(self, mock_pool_manager):
+        mock_response = MagicMock()
+        mock_response.status = 200
+        mock_response.data = b'asdasd'
+        mock_pool_manager.return_value.request.return_value = mock_response
 
+        url = "https://raw.githubusercontent.com/github/gitignore/refs/heads/main/Objective-C.gitignore"
         result = pywload.download(url)
 
         self.assertTrue(result)
-        mock_urlretrieve.assert_called_once_with(url, 66)
+        mock_pool_manager.return_value.request.assert_called_once_with('GET', url)
 
-    @patch('urllib.request.urlretrieve')
-    def test_download_failure(self, mock_urlretrieve):
-        mock_urlretrieve.side_effect = Exception("Download failed")
+    @patch('urllib3.PoolManager')
+    def test_download_failure(self, mock_pool_manager):
+        mock_response = MagicMock()
+        mock_response.status = 404
+        mock_pool_manager.return_value.request.return_value = mock_response
+
         url = "https://raw.githubusercontent.com/github/gitignore/refs/heads/main/Objective-C.gitignore"
-
         result = pywload.download(url)
 
-        self.assertFalse(result)  # Expecting False on failure
-        mock_urlretrieve.assert_called_once_with(url, 66)  # This remains unchanged as the failure case
+        self.assertFalse(result)
+        mock_pool_manager.return_value.request.assert_called_once_with('GET', url)
 
 if __name__ == "__main__":
     unittest.main()

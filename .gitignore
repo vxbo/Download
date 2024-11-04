@@ -35,6 +35,9 @@
 # macOS
 *.DS_Store
 
+# Downloaded files
+Objective-C.gitignore
+
 # CMake
 CMakeLists.txt.user
 CMakeCache.txt
