@@ -15,7 +15,6 @@ static std::string fetchFilename(const std::string& url)
 
 namespace Cownload
 {
-	const bool getAssets(const std::string& repo, const std::string& tag, const std::string& path);
-	const bool getFile(const std::string& link, const std::string& path);
+	// const bool getAssets(const std::string& repo, const std::string& tag, const std::string& path);
 	const bool download(const std::string& link, const std::string& path);
 } // namespace Cownload

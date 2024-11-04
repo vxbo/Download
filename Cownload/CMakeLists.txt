@@ -10,11 +10,11 @@ set(CMAKE_CXX_STANDARD_REQUIRED YES)
 
 include("cmake/vcpkg.cmake")
 
-find_package(nlohmann_json CONFIG REQUIRED)
-target_link_libraries(${PROJECT_NAME} PRIVATE nlohmann_json::nlohmann_json)
-
 find_package(CURL REQUIRED)
 target_link_libraries(${PROJECT_NAME} PRIVATE CURL::libcurl)
+
+find_package(Boost REQUIRED COMPONENTS filesystem system)
+target_link_libraries(${PROJECT_NAME} PRIVATE Boost::filesystem Boost::system)
 
 target_include_directories(${PROJECT_NAME} PUBLIC "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>$<INSTALL_INTERFACE:include>")
 

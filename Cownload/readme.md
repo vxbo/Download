@@ -9,7 +9,7 @@
 ```bat
 @REM DO THE vcpkg integrate install IF YOU HAVEN'T ALREADY
 @REM YOU SHOULD ALSO SET THE `VCPKG_ROOT` ENV VARIABLE THAT POINTS TO THE VCPKG DIRECTORY
-vcpkg install nlohmann-json curl gtest
+vcpkg install boost[boost-filesystem,boost-system] curl gtest
 git clone https://github.com/vxbo/Download.git && cd Download && cd Cownload
 mkdir build && cd build
 cmake .. -DCMAKE_TOOLCHAIN_FILE=%VCPKG_ROOT%/scripts/buildsystems/vcpkg.cmake
@@ -20,9 +20,9 @@ cmake --build .
   </div>
   <p>This project uses the following external libraries:</p>
   <ul>
-    <li><a href="https://github.com/nlohmann/json">nlohmann-json</a>: Licensed under the MIT License.</li>
-    <li><a href="https://curl.se">curl</a>: Licensed under the MIT/X License.</li>
-    <li><a href="https://github.com/google/googletest">Google Test</a>: Licensed under the BSD 3-Clause License.</li>
+    <li><a href="https://www.boost.org">Boost</a>: Licensed under the BSL-1.0 License.</li>
+    <li><a href="https://curl.se">curl</a>: Licensed under the curlandISCandBSD-3-Clause License.</li>
+    <li><a href="https://github.com/google/googletest">Google Test</a>: Licensed under the BSD-3-Clause License.</li>
   </ul>
   <div align="center">
     <p>Please refer to the <code>third_party</code> directory in the project root for the full license texts.</p>
