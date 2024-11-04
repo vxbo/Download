@@ -29,7 +29,6 @@ cmake --build .
     <hr>
     <h2>Misc</h2>
     <img src="media/progress.png" alt="lol have fun with that xd">
-    <h3>At least direct link downloading works 😭</h3>
   </div>
   </body>
 </html>
