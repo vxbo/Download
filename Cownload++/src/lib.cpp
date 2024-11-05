@@ -36,6 +36,7 @@ const bool Cownloadpp::download(const std::string& link, const std::string& path
 	{
 		cURLpp::initialize();
 
+		cURLpp::Cleanup cleanup;
 		cURLpp::Easy request;
 		request.setOpt(cURLpp::Options::Url(link));
 		request.setOpt(cURLpp::Options::FollowLocation(true));
@@ -64,6 +65,5 @@ const bool Cownloadpp::download(const std::string& link, const std::string& path
 	}
 
 	file.close();
-	cURLpp::terminate();
 	return true;
 }

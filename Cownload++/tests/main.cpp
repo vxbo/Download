@@ -1,4 +1,3 @@
-#include <curlpp/Options.hpp>
 #include <curlpp/cURLpp.hpp>
 #include <curlpp/Easy.hpp>
 #include <Cownloadpp.hpp>
@@ -9,8 +8,8 @@
 class CurlMock
 {
 public:
-    MOCK_METHOD(CURLcode, curl_easy_perform, (CURL*), ());
-    MOCK_METHOD(void, curl_easy_cleanup, (CURL*), ());
+    MOCK_METHOD(void, perform, (), ());
+    MOCK_METHOD(void, cleanup, (), ());
 };
 
 class CownloadppTest : public ::testing::Test
