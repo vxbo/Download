@@ -13,9 +13,7 @@ pip install -r requirements.txt
   <div align="center">
     <p>And then use the <code>pywload.py</code> in your code</p>
     <hr>
-    <p>To run tests, run the <code>run_tests.cmd</code> or execute</p>
-    <br>
-    <code>python -m unittest main.py</code>
+    <p>To run tests, run the <code>run_tests.cmd</code> or execute <code>python -m unittest main.py</code></p>
     <h2>External Libraries</h2>
   </div>
   <p>This project uses the following external libraries:</p>
