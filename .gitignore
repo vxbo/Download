@@ -1,6 +1,28 @@
+## specific folders
+
+**/[Dd]ebug/
+**/[Rr]elease/
+**/[Bb]in/
+**/[Oo]bj/
+**/[Ll]og/
+
+##
+
+## test results
+
+**/TestResults/
+*.trx
+
+##
+
 ## visual studio
 
 **/.vs/
+**/obj/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
 
 ##
 
@@ -19,9 +41,11 @@
 
 ## garbage
 
-# GitHub workflow stuff (will be reworked)
-.github/
-*.PROJ
+# NuGet
+*.nupkg
+*.snupkg
+**/packages/*
+!**/packages/build/
 
 # C++
 *.lib
@@ -31,6 +55,7 @@
 
 # Python
 **/__pycache__/
+*.pyc
 
 # macOS
 *.DS_Store
