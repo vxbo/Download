@@ -38,7 +38,7 @@ IF errorlevel 1 (
     GOTO :EOF
 )
 
-ECHO Build completed successfully.
+IF errorlevel NEQ 1 Build completed successfully.
 
 PAUSE >NUL
 GOTO :EOF
