@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.21 FATAL_ERROR)
 
-project(Cownloadpp LANGUAGES CXX VERSION 1.0.2)
+project(Cownloadpp VERSION 1.0.2 LANGUAGES CXX)
 
 include_directories("include")
 add_library(${PROJECT_NAME} STATIC "src/Cownloadpp.cpp")
