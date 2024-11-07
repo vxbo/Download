@@ -1,7 +1,7 @@
 <html>
   <body>
     <div align="center">
-      <h1>Python Implementation (I hate this)</h1>
+      <h1>Python Implementation</h1>
       <h2>Building</h2>
       <p>You will need <a href="https://git-scm.com">git</a> and <a href="https://www.python.org">Python</a> (with pip)</a></p>
     </div>
