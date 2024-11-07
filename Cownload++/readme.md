@@ -3,7 +3,7 @@
     <div align="center">
       <h1>C++ Implementation</h1>
       <h2>Building</h2>
-      <p>You will need <a href="https://git-scm.com">git</a>, <a href="https://cmake.org">CMake</a>, a compiler, and <a href="https://vcpkg.io">vcpkg</a></p>
+      <p>You will need <a href="https://git-scm.com">git</a>, <a href="https://cmake.org">CMake</a>, a C++ compiler, and <a href="https://vcpkg.io">vcpkg</a></p>
     </div>
     
 ```bat
