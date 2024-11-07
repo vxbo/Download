@@ -19,9 +19,6 @@ build.cmd
   </ul>
   <div align="center">
     <p>Please refer to the <code>third_party</code> directory in the project root for the full license text.</p>
-    <hr>
-    <h2>Misc</h2>
-    <p>So I tried using like 10+ libraries for unittests, eventually got insane and I hate C#</p>
   </div>
   </body>
 </html>
